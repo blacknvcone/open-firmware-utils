@@ -55,10 +55,10 @@ void get_md5(const char *data, int size, uint8_t *md5);
 int get_file_stat(struct file_info *fdata);
 int read_to_buf(const struct file_info *fdata, char *buf);
 int write_fw(const char *ofname, const char *data, int len);
-inline void inspect_fw_pstr(const char *label, const char *str);
-inline void inspect_fw_phex(const char *label, uint32_t val);
-inline void inspect_fw_phexdec(const char *label, uint32_t val);
-inline void inspect_fw_pmd5sum(const char *label, const uint8_t *val, const char *text);
+void inspect_fw_pstr(const char *label, const char *str);
+void inspect_fw_phex(const char *label, uint32_t val);
+void inspect_fw_phexdec(const char *label, uint32_t val);
+void inspect_fw_pmd5sum(const char *label, const uint8_t *val, const char *text);
 int build_fw(size_t header_size);
 
 #endif /* mktplinkfw_lib_h */
